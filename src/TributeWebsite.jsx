@@ -24,6 +24,12 @@ const TributeWebsite = () => {
         return () => window.removeEventListener('mousemove', handleMouseMove);
     }, [mouseX, mouseY]);
 
+    // Scroll to top when stage changes
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [stage]);
+
+
     // Generate floating particles
     useEffect(() => {
         const newParticles = Array.from({ length: 20 }, (_, i) => ({
@@ -350,7 +356,7 @@ const TributeWebsite = () => {
                                 <div className="p-6 md:p-12 lg:p-16 relative z-10">
                                     {/* Wax Seal - Internal Right Aligned */}
                                     <motion.div
-                                        className="absolute top-12 right-0 md:top-20 md:right-16 w-12 h-12 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-[#4A0404] via-[#3E0303] to-[#200101] flex items-center justify-center border border-[#B87333]/40 z-20 shadow-2xl"
+                                        className="absolute top-4 right-4 md:top-20 md:right-16 w-12 h-12 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-[#4A0404] via-[#3E0303] to-[#200101] flex items-center justify-center border border-[#B87333]/40 z-20 shadow-2xl"
                                         initial={{ scale: 0, rotate: -180 }}
                                         animate={{ scale: 1, rotate: 0 }}
                                         transition={{ delay: 0.5, type: "spring" }}
