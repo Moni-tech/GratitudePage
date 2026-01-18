@@ -69,4 +69,15 @@ gratitudepage/
 ```
 
 ---
+
 *Created with gratitude.*
+
+## 🌐 Deployment
+
+The application is deployed and can be viewed here:
+[**Live Demo on Vercel**](https://gratitude-page-moni-tech.vercel.app/)
+
+## 📄 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+

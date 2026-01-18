@@ -2,6 +2,7 @@
     "name": "gratitudepage",
     "version": "0.1.0",
     "private": true,
+    "license": "MIT",
     "dependencies": {
         "framer-motion": "^10.16.4",
         "react": "^18.2.0",
