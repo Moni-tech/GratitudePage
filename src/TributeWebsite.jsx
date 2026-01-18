@@ -526,8 +526,8 @@ const TributeWebsite = () => {
                                         <div className="absolute bottom-4 left-0 right-0 text-center px-2">
                                             <p className="text-[#4A4A4A] text-[15px] font-caveat font-semibold">
                                                 {index === 0 && "A moment of guidance"}
-                                                {index === 1 && "Shared moments of wisdom"}
-                                                {index === 2 && "Memories cherished"}
+                                                {index === 1 && "Memories cherished"}
+                                                {index === 2 && "Shared moments of wisdom"}
                                             </p>
                                         </div>
 
