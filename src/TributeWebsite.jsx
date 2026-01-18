@@ -10,7 +10,7 @@ const TributeWebsite = () => {
     const [particles, setParticles] = useState([]);
     const [envelopeHovered, setEnvelopeHovered] = useState(false);
     const [selectedPhoto, setSelectedPhoto] = useState(null);
-    const [typingSpeed, setTypingSpeed] = useState(20); // Faster default speed
+    const [typingSpeed] = useState(20); // Faster default speed
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
 
