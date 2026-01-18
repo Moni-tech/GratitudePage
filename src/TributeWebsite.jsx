@@ -157,7 +157,7 @@ const TributeWebsite = () => {
 
             <AnimatePresence mode="wait">
                 {/* Stage 1: Envelope with enhanced animations */}
-                {stage === 'envelope' && (
+                {stage === 'envelope' ? (
                     <motion.div
                         key="envelope"
                         initial={{ opacity: 0 }}
@@ -317,10 +317,7 @@ const TributeWebsite = () => {
                             </motion.p>
                         </motion.div>
                     </motion.div>
-                )}
-
-                {/* Stage 2: Enhanced Vintage Scroll Letter */}
-                {stage === 'letter' && (
+                ) : stage === 'letter' ? (
                     <motion.div
                         key="letter"
                         initial={{ opacity: 0 }}
@@ -434,10 +431,7 @@ const TributeWebsite = () => {
                             </div>
                         </motion.div>
                     </motion.div>
-                )}
-
-                {/* Stage 3: Enhanced Photo Collage */}
-                {stage === 'photos' && (
+                ) : stage === 'photos' ? (
                     <motion.div
                         key="photos"
                         initial={{ opacity: 0 }}
@@ -600,49 +594,51 @@ const TributeWebsite = () => {
 
                         </motion.div>
                     </motion.div>
-                )}
+                ) : null}
 
-                {/* Full Screen Photo Modal */}
-                <AnimatePresence>
-                    {selectedPhoto && (
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
+
+            </AnimatePresence>
+
+            {/* Full Screen Photo Modal */}
+            <AnimatePresence>
+                {selectedPhoto && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setSelectedPhoto(null)}
+                        className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm"
+                        aria-modal="true"
+                        role="dialog"
+                    >
+                        <motion.button
+                            className="absolute top-4 right-4 text-white/50 hover:text-white p-2 min-w-[44px] min-h-[44px]"
                             onClick={() => setSelectedPhoto(null)}
-                            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm"
-                            aria-modal="true"
-                            role="dialog"
+                            aria-label="Close modal"
                         >
-                            <motion.button
-                                className="absolute top-4 right-4 text-white/50 hover:text-white p-2 min-w-[44px] min-h-[44px]"
-                                onClick={() => setSelectedPhoto(null)}
-                                aria-label="Close modal"
-                            >
-                                ✕
-                            </motion.button>
-                            <motion.div
-                                initial={{ scale: 0.9, opacity: 0 }}
-                                animate={{ scale: 1, opacity: 1 }}
-                                exit={{ scale: 0.9, opacity: 0 }}
-                                className="max-w-5xl max-h-[90vh] relative"
-                                onClick={(e) => e.stopPropagation()}
-                            >
-                                <img
-                                    src={selectedPhoto.altImageUrl}
-                                    alt="Memory Full Size"
-                                    className="max-h-[80vh] w-auto object-contain rounded-sm shadow-2xl"
-                                />
-                                <p className="text-white/80 text-center mt-4 font-caveat text-xl">
-                                    {selectedPhoto.id === 1 && "A moment of guidance"}
-                                    {selectedPhoto.id === 2 && "Shared moments of wisdom"}
-                                    {selectedPhoto.id === 3 && "Memories cherished"}
-                                    {selectedPhoto.id === 4 && "Forever grateful"}
-                                </p>
-                            </motion.div>
+                            ✕
+                        </motion.button>
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.9, opacity: 0 }}
+                            className="max-w-5xl max-h-[90vh] relative"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <img
+                                src={selectedPhoto.altImageUrl}
+                                alt="Memory Full Size"
+                                className="max-h-[80vh] w-auto object-contain rounded-sm shadow-2xl"
+                            />
+                            <p className="text-white/80 text-center mt-4 font-caveat text-xl">
+                                {selectedPhoto.id === 1 && "A moment of guidance"}
+                                {selectedPhoto.id === 2 && "Shared moments of wisdom"}
+                                {selectedPhoto.id === 3 && "Memories cherished"}
+                                {selectedPhoto.id === 4 && "Forever grateful"}
+                            </p>
                         </motion.div>
-                    )}
-                </AnimatePresence>
+                    </motion.div>
+                )}
             </AnimatePresence>
         </div >
     );

@@ -38,7 +38,7 @@ A premium, interactive digital tribute experience designed to honor **Mr. Adarsh
 
 1.  **Clone the repository**:
     ```bash
-    git clone <repository-url>
+    git clone [<repository-url>](https://github.com/Moni-tech/GratitudePage.git)
     cd gratitudepage
     ```
 
