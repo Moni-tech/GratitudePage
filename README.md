@@ -79,5 +79,5 @@ The application is deployed and can be viewed here:
 
 ## 📄 License
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+This project is licensed under a custom license - see the [LICENSE](LICENSE) file for details. Note that while the code is open for use, the **media assets (photos)** are proprietary and cannot be redistributed without permission.
 

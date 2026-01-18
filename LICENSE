@@ -1,5 +1,3 @@
-MIT License
-
 Copyright (c) 2026 Moni-tech
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -9,8 +7,16 @@ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. Attribution: The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software. Any distribution
+or sale of the Software or derivative works must explicitly credit the original
+creator (Moni-tech).
+
+2. Media Assets: All photos and media assets included in this project are the
+original creations of the author. These assets are NOT covered by the open-source
+permissions granted above. They may not be sold, redistributed, or claimed by
+others, in whole or in part, without the express written permission of the
+copyright holder.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
